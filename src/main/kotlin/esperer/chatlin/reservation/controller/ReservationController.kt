@@ -5,12 +5,10 @@ import esperer.chatlin.reservation.data.Seat
 import esperer.chatlin.reservation.persistence.SeatReservationRepository
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
-import org.springframework.messaging.simp.SimpMessageSendingOperations
 import org.springframework.messaging.simp.SimpMessagingTemplate
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
-import kotlin.math.log
 
 @RestController
 class ReservationController(
