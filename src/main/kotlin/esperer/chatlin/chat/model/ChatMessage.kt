@@ -1,7 +1,7 @@
 package esperer.chatlin.chat.model
 
 data class ChatMessage(
-    var type: String,
+    var type: MessageType,
     var content: String,
     var sender: String
 )
