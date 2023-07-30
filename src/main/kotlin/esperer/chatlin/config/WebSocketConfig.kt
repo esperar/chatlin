@@ -12,10 +12,14 @@ class WebSocketConfig : WebSocketMessageBrokerConfigurer {
 
     override fun registerStompEndpoints(registry: StompEndpointRegistry) {
         registry.addEndpoint("/ws").withSockJS()
+        registry.addEndpoint("/sit-down-monkey")
+            .setAllowedOrigins("http://localhost:8081")
+            .withSockJS()
     }
 
     override fun configureMessageBroker(registry: MessageBrokerRegistry) {
         registry.setApplicationDestinationPrefixes("/app")
         registry.enableSimpleBroker("/topic")
+        registry.enableSimpleBroker("/seat")
     }
 }
